@@ -1,0 +1,50 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}
+<title>Edit</title>
+{% endblock %}
+
+{% block content %}
+<div class="w-full mt-10 flex justify-center ">
+<form action="" method="POST" class="shadow-lg m-10">
+    {% csrf_token %}
+    <div class="px-10 py-10 flex space-x-40">
+
+        <div class="mx-10">
+            <div class="mb-5">
+                <label class="font-semibold" for="">Expense Name</label>
+            </div>
+            <div class="border p-1">
+                {{ form.name }}
+            </div>
+        </div>
+
+         <div class="mx-10">
+            <div class="mb-5">
+                <label class="font-semibold" for="">Expense Amount</label>
+            </div>
+            <div class="border p-1">
+                {{ form.amount }}
+            </div>
+        </div>
+
+        <div class="mx-10">
+            <div class="mb-5">
+                <label class="font-semibold" for="">Expense Category</label>
+            </div>
+            <div class="border p-1">
+                {{ form.category }}
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <div class="px-10 py-5 mx-10 ">
+        <button class="bg-green-500 px-5 py-2 text-white font-bold" type="submit">Submit</button>
+    </div>
+</form>
+
+</div>
+{% endblock %}
