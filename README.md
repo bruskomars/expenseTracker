@@ -23,6 +23,7 @@ Installation
 Clone the repository:
 
 git clone https://github.com/bruskomars/expenseTracker.git
+
 cd expense-tracker
 
 Install the required dependencies:
